@@ -9,7 +9,8 @@
       "Submarine.Kata/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "9.0.1",
-          "Microsoft.Extensions.Hosting": "9.0.1"
+          "Microsoft.Extensions.Hosting": "9.0.1",
+          "System.IO.Abstractions": "21.3.1"
         },
         "runtime": {
           "Submarine.Kata.dll": {}
@@ -395,6 +396,37 @@
             "fileVersion": "9.0.124.61010"
           }
         }
+      },
+      "System.IO.Abstractions/21.3.1": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "21.3.1",
+          "TestableIO.System.IO.Abstractions.Wrappers": "21.3.1"
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Abstractions.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions/21.3.1": {
+        "runtime": {
+          "lib/net9.0/TestableIO.System.IO.Abstractions.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions.Wrappers/21.3.1": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "21.3.1"
+        },
+        "runtime": {
+          "lib/net9.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
       }
     }
   },
@@ -599,6 +631,27 @@
       "sha512": "sha512-iVnDpgYJsRaRFnk77kcLA3+913WfWDtnAKrQl9tQ5ahqKANTaJKmQdsuPWWiAPWE9pk1Kj4Pg9JGXWfFYYyakQ==",
       "path": "system.diagnostics.eventlog/9.0.1",
       "hashPath": "system.diagnostics.eventlog.9.0.1.nupkg.sha512"
+    },
+    "System.IO.Abstractions/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gm8HI/AHwoWd1r9IUShekWgAQjJgTM1jmrJHSkxONeuVUQAZdxSKzGYTjReBYgqLvF1Zq1Hcd1qHytrL0HuiBg==",
+      "path": "system.io.abstractions/21.3.1",
+      "hashPath": "system.io.abstractions.21.3.1.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B9USlBOZAiqXss7AI4BH6HVWs+HoHx38OadJjBO0VCzEWgP/u0u52bogmrzDHsyqRv8Yo/xtIMQXgpjLoaAUXw==",
+      "path": "testableio.system.io.abstractions/21.3.1",
+      "hashPath": "testableio.system.io.abstractions.21.3.1.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions.Wrappers/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/xu8G96pntsofFG8vh6BKbVbYWtqYZTpNCcj4jGNwxwSbwY2gvDmkiFmIbWf7lgzPZbopW2FAfaY6m4K/3QJw==",
+      "path": "testableio.system.io.abstractions.wrappers/21.3.1",
+      "hashPath": "testableio.system.io.abstractions.wrappers.21.3.1.nupkg.sha512"
     }
   }
 }

@@ -14,6 +14,7 @@
           "NUnit.Analyzers": "4.3.0",
           "NUnit3TestAdapter": "4.6.0",
           "Submarine.Kata": "1.0.0",
+          "TestableIO.System.IO.Abstractions.TestingHelpers": "21.3.1",
           "coverlet.collector": "6.0.2"
         },
         "runtime": {
@@ -706,11 +707,55 @@
           }
         }
       },
+      "System.IO.Abstractions/21.3.1": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "21.3.1",
+          "TestableIO.System.IO.Abstractions.Wrappers": "21.3.1"
+        },
+        "runtime": {
+          "lib/net8.0/System.IO.Abstractions.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
       "System.Reflection.Metadata/1.6.0": {},
+      "TestableIO.System.IO.Abstractions/21.3.1": {
+        "runtime": {
+          "lib/net9.0/TestableIO.System.IO.Abstractions.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions.TestingHelpers/21.3.1": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "21.3.1",
+          "TestableIO.System.IO.Abstractions.Wrappers": "21.3.1"
+        },
+        "runtime": {
+          "lib/net9.0/TestableIO.System.IO.Abstractions.TestingHelpers.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
+      "TestableIO.System.IO.Abstractions.Wrappers/21.3.1": {
+        "dependencies": {
+          "TestableIO.System.IO.Abstractions": "21.3.1"
+        },
+        "runtime": {
+          "lib/net9.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
+            "assemblyVersion": "21.0.0.0",
+            "fileVersion": "21.3.1.14271"
+          }
+        }
+      },
       "Submarine.Kata/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "9.0.1",
-          "Microsoft.Extensions.Hosting": "9.0.1"
+          "Microsoft.Extensions.Hosting": "9.0.1",
+          "System.IO.Abstractions": "21.3.1"
         },
         "runtime": {
           "Submarine.Kata.dll": {
@@ -1000,12 +1045,40 @@
       "path": "system.diagnostics.eventlog/9.0.1",
       "hashPath": "system.diagnostics.eventlog.9.0.1.nupkg.sha512"
     },
+    "System.IO.Abstractions/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gm8HI/AHwoWd1r9IUShekWgAQjJgTM1jmrJHSkxONeuVUQAZdxSKzGYTjReBYgqLvF1Zq1Hcd1qHytrL0HuiBg==",
+      "path": "system.io.abstractions/21.3.1",
+      "hashPath": "system.io.abstractions.21.3.1.nupkg.sha512"
+    },
     "System.Reflection.Metadata/1.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-B9USlBOZAiqXss7AI4BH6HVWs+HoHx38OadJjBO0VCzEWgP/u0u52bogmrzDHsyqRv8Yo/xtIMQXgpjLoaAUXw==",
+      "path": "testableio.system.io.abstractions/21.3.1",
+      "hashPath": "testableio.system.io.abstractions.21.3.1.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions.TestingHelpers/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XP7tiKVtnOP+jXWsRqgc7WCV2tsoolVnxSNUJXwdWmHCpLMsVlZXRag7dMynnNEQQB9XEJx25RteqN5APCnjag==",
+      "path": "testableio.system.io.abstractions.testinghelpers/21.3.1",
+      "hashPath": "testableio.system.io.abstractions.testinghelpers.21.3.1.nupkg.sha512"
+    },
+    "TestableIO.System.IO.Abstractions.Wrappers/21.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-l/xu8G96pntsofFG8vh6BKbVbYWtqYZTpNCcj4jGNwxwSbwY2gvDmkiFmIbWf7lgzPZbopW2FAfaY6m4K/3QJw==",
+      "path": "testableio.system.io.abstractions.wrappers/21.3.1",
+      "hashPath": "testableio.system.io.abstractions.wrappers.21.3.1.nupkg.sha512"
     },
     "Submarine.Kata/1.0.0": {
       "type": "project",

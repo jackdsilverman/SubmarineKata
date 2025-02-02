@@ -135,3 +135,8 @@
 /Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/Submarine.Kata.pdb
 /Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/Castle.Core.dll
 /Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/Moq.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/System.IO.Abstractions.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/TestableIO.System.IO.Abstractions.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/TestableIO.System.IO.Abstractions.Wrappers.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/obj/Debug/net9.0/Submarine.Kata.Tests.sourcelink.json
+/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/bin/Debug/net9.0/TestableIO.System.IO.Abstractions.TestingHelpers.dll

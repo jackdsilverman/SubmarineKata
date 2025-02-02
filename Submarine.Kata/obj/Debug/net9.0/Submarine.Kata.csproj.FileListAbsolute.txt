@@ -45,3 +45,6 @@
 /Users/jacksilverman/submarine_kata/Submarine.Kata/obj/Debug/net9.0/Submarine.Kata.genruntimeconfig.cache
 /Users/jacksilverman/submarine_kata/Submarine.Kata/obj/Debug/net9.0/ref/Submarine.Kata.dll
 /Users/jacksilverman/submarine_kata/Submarine.Kata/obj/Debug/net9.0/Submarine.Kata.sourcelink.json
+/Users/jacksilverman/submarine_kata/Submarine.Kata/bin/Debug/net9.0/System.IO.Abstractions.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata/bin/Debug/net9.0/TestableIO.System.IO.Abstractions.dll
+/Users/jacksilverman/submarine_kata/Submarine.Kata/bin/Debug/net9.0/TestableIO.System.IO.Abstractions.Wrappers.dll

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XNtKhOMy/cI=",
+  "dgSpecHash": "ExUswlsB69g=",
   "success": true,
   "projectFilePath": "/Users/jacksilverman/submarine_kata/Submarine.Kata.Tests/Submarine.Kata.Tests.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,11 @@
     "/Users/jacksilverman/.nuget/packages/nunit.analyzers/4.3.0/nunit.analyzers.4.3.0.nupkg.sha512",
     "/Users/jacksilverman/.nuget/packages/nunit3testadapter/4.6.0/nunit3testadapter.4.6.0.nupkg.sha512",
     "/Users/jacksilverman/.nuget/packages/system.diagnostics.eventlog/9.0.1/system.diagnostics.eventlog.9.0.1.nupkg.sha512",
-    "/Users/jacksilverman/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512"
+    "/Users/jacksilverman/.nuget/packages/system.io.abstractions/21.3.1/system.io.abstractions.21.3.1.nupkg.sha512",
+    "/Users/jacksilverman/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
+    "/Users/jacksilverman/.nuget/packages/testableio.system.io.abstractions/21.3.1/testableio.system.io.abstractions.21.3.1.nupkg.sha512",
+    "/Users/jacksilverman/.nuget/packages/testableio.system.io.abstractions.testinghelpers/21.3.1/testableio.system.io.abstractions.testinghelpers.21.3.1.nupkg.sha512",
+    "/Users/jacksilverman/.nuget/packages/testableio.system.io.abstractions.wrappers/21.3.1/testableio.system.io.abstractions.wrappers.21.3.1.nupkg.sha512"
   ],
   "logs": []
 }
