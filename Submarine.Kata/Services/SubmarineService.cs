@@ -4,14 +4,14 @@ namespace Subamrine.Kata.Services;
 
 public interface ISubmarineService
 {
-    public void Dive(int dive); 
-    public void Rise(int rise);
-    public void Forward(int forward);
+    public void HandleDown(int dive); 
+    public void HandleUp(int rise);
+    public void HandleForward(int forward);
 
     public int GetDepth();
-    public int GetDistance();
-    public int GetDistanceTraveled();
-
+    public int GetHorizontalPosition();
+    public int GetChecksum();
+    public int GetAim();
 }
 
 public class SubmarineService : ISubmarineService
@@ -21,14 +21,18 @@ public class SubmarineService : ISubmarineService
     {
         sub = new Sub();
     }
-    public void Dive(int dive) => sub.Depth += dive;
-    public void Rise(int rise) => sub.Depth -= rise;
+    public void HandleDown(int down) => sub.Aim += down;
+    public void HandleUp(int up) => sub.Aim -= up;
 
-    public void Forward(int forward) => sub.Distance += forward;
+    public void HandleForward(int forward){
+        sub.HorizontalPosition += forward;
+        sub.Depth += sub.Aim * forward;
+    }
 
     public int GetDepth() => sub.Depth;
 
-    public int GetDistance() => sub.Distance;
+    public int GetHorizontalPosition() => sub.HorizontalPosition;
 
-    public int GetDistanceTraveled() =>sub.Depth * sub.Distance;
+    public int GetAim() => sub.Aim;
+    public int GetChecksum() =>sub.Depth * sub.HorizontalPosition;
 }

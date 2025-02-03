@@ -19,9 +19,9 @@ public class Pilot(ISubmarineService submarineService, IFileSystem fileSystem)
             {
                 var distance = Convert.ToInt32(d.Split(' ')[1]);
 
-                if (d.Contains("up")) submarineService.Rise(distance);
-                else if (d.Contains("down")) submarineService.Dive(distance);
-                else if(d.Contains("forward")) submarineService.Forward(distance);
+                if (d.Contains("up")) submarineService.HandleUp(distance);
+                else if (d.Contains("down")) submarineService.HandleDown(distance);
+                else if(d.Contains("forward")) submarineService.HandleForward(distance);
             });
             return ExposeSubmarinePosition();   
         }
@@ -33,7 +33,7 @@ public class Pilot(ISubmarineService submarineService, IFileSystem fileSystem)
 
     private string ExposeSubmarinePosition()
     {
-        return $"\nHorizontal Position: {submarineService.GetDistance()}\n\nSubmarine Depth: {submarineService.GetDepth()}\n\nHorizontal Position * Depth: {submarineService.GetDistanceTraveled()}";
+        return $"\nHorizontal Position: {submarineService.GetHorizontalPosition()}\n\nSubmarine Depth: {submarineService.GetDepth()}\n\nHorizontal Position * Depth: {submarineService.GetChecksum()}";
     }
 
 

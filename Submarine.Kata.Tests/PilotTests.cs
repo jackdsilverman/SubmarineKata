@@ -54,8 +54,8 @@ public class PilotTests
         var expected = "\nHorizontal Position: 9\n\nSubmarine Depth: 6\n\nHorizontal Position * Depth: 54";
     
         subServiceMock.Setup(ss => ss.GetDepth()).Returns(6);
-        subServiceMock.Setup(ss => ss.GetDistance()).Returns(9);
-        subServiceMock.Setup(ss => ss.GetDistanceTraveled()).Returns(54);
+        subServiceMock.Setup(ss => ss.GetHorizontalPosition()).Returns(9);
+        subServiceMock.Setup(ss => ss.GetChecksum()).Returns(54);
         Pilot pilot = new Pilot(subServiceMock.Object, fileSystemMock);
         //act
         var message = pilot.Drive(args);

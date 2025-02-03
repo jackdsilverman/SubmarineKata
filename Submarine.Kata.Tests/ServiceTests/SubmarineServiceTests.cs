@@ -5,39 +5,15 @@ namespace Submarine.Kata.Tests.ServiceTests;
 public class SubmarineServiceTests
 {
     [Test]
-    public void Dive_Go_Deeper()
-    {
-        //arrange
-        int dive = 15;
-        ISubmarineService submarineService = new SubmarineService();
-        //act
-        submarineService.Dive(dive);
-        //assert
-        Assert.That(submarineService.GetDepth(), Is.EqualTo(dive));
-    }
-    [Test]
-    public void Rise_Go_Up()
-    {
-        //arrange
-        int dive = 15;
-        int rise = 5;
-        ISubmarineService submarineService = new SubmarineService();
-        //act
-        submarineService.Dive(dive);
-        submarineService.Rise(rise);
-        //assert
-        Assert.That(submarineService.GetDepth(), Is.EqualTo(dive-rise));
-    }
-    [Test]
     public void Rise_Stay_At_The_Top()
     {
         //arrange
         int rise = 5;
         ISubmarineService submarineService = new SubmarineService();
         //act
-        submarineService.Rise(rise);
+        submarineService.HandleUp(rise);
         //assert
-        Assert.That(submarineService.GetDepth(), Is.EqualTo(-5));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(0));
     }
     [Test]
     public void Forward_Go_Forward()
@@ -46,21 +22,98 @@ public class SubmarineServiceTests
         int forward = 10;
         ISubmarineService submarineService = new SubmarineService();
         //act
-        submarineService.Forward(forward);
+        submarineService.HandleForward(forward);
         //assert
-        Assert.That(submarineService.GetDistance(), Is.EqualTo(forward));
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(forward));
     }
     [Test]
-    public void Get_Distance_Traveled()
+    public void Forward_Calculates_Position()
     {
-        //arrange
-        int forward = 19;
-        int dive = 2;
+        int forward = 5;
         ISubmarineService submarineService = new SubmarineService();
-        //act
-        submarineService.Forward(forward);
-        submarineService.Dive(dive);
-        //assert
-        Assert.That(submarineService.GetDistanceTraveled(), Is.EqualTo(forward*dive));
+
+        submarineService.HandleForward(forward);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(forward));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(0));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(0));
+    }
+    [Test]
+    public void Line_30()
+    {
+        int forward = 5;
+        int down = 5;
+
+        ISubmarineService submarineService = new SubmarineService();
+
+        submarineService.HandleForward(forward);
+        submarineService.HandleDown(down);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(forward));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(down));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(0));
+
+    }
+
+    [Test]
+    public void Line_31()
+    {
+        ISubmarineService submarineService = new SubmarineService();
+
+        submarineService.HandleForward(5);
+        submarineService.HandleDown(5);
+        submarineService.HandleForward(8);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(13));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(5));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(40));
+    }
+    [Test]
+    public void Line_32()
+    {
+        ISubmarineService submarineService = new SubmarineService();
+
+        submarineService.HandleForward(5);
+        submarineService.HandleDown(5);
+        submarineService.HandleForward(8);
+        submarineService.HandleUp(3);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(13));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(2));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(40));
+    }
+
+    [Test]
+    public void Line_33()
+    {
+        ISubmarineService submarineService = new SubmarineService();
+
+        submarineService.HandleForward(5);
+        submarineService.HandleDown(5);
+        submarineService.HandleForward(8);
+        submarineService.HandleUp(3);
+        submarineService.HandleDown(8);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(13));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(10));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(40));
+    }
+    [Test]
+    public void Line_34()
+    {
+        ISubmarineService submarineService = new SubmarineService();
+
+        submarineService.HandleForward(5);
+        submarineService.HandleDown(5);
+        submarineService.HandleForward(8);
+        submarineService.HandleUp(3);
+        submarineService.HandleDown(8);
+        submarineService.HandleForward(2);
+
+        Assert.That(submarineService.GetHorizontalPosition(), Is.EqualTo(15));
+        Assert.That(submarineService.GetAim(), Is.EqualTo(10));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(60));
+        Assert.That(submarineService.GetChecksum(), Is.EqualTo(900));
+        
     }
 }
