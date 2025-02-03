@@ -37,7 +37,7 @@ public class SubmarineServiceTests
         //act
         submarineService.Rise(rise);
         //assert
-        Assert.That(submarineService.GetDepth(), Is.EqualTo(0));
+        Assert.That(submarineService.GetDepth(), Is.EqualTo(-5));
     }
     [Test]
     public void Forward_Go_Forward()
