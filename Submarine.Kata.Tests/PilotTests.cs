@@ -51,7 +51,7 @@ public class PilotTests
     {
         //arrange
         var args = new string[]{@"c:/testFile.txt"};
-        var expected = $"Distance Traveled: 9\nSubmarine Depth: 6\nTotal Distance Traveled: 54";
+        var expected = "\nHorizontal Position: 9\n\nSubmarine Depth: 6\n\nHorizontal Position * Depth: 54";
     
         subServiceMock.Setup(ss => ss.GetDepth()).Returns(6);
         subServiceMock.Setup(ss => ss.GetDistance()).Returns(9);
@@ -67,7 +67,7 @@ public class PilotTests
     {
         //arrange
         var args = new string[]{@"c:/badDirections.txt"};
-        var expected = "Distance Traveled: 0\nSubmarine Depth: 0\nTotal Distance Traveled: 0";
+        var expected = "\nHorizontal Position: 0\n\nSubmarine Depth: 0\n\nHorizontal Position * Depth: 0";
     
         fileSystemMock.AddFile("c:/badDirections.txt", new MockFileData("backwards 2\nstraight 3"));
         Pilot pilot = new Pilot(subServiceMock.Object, fileSystemMock);

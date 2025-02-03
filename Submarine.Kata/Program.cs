@@ -16,6 +16,7 @@ public class Program
         Pilot pilot = new Pilot(serviceProvider.GetService<ISubmarineService>()!, serviceProvider.GetService<IFileSystem>()!);
         var message = pilot.Drive(args);
         Console.WriteLine(message);
-    
+        Console.WriteLine("\nPress enter to exit the sub");
+        Console.Read();
     }
 }

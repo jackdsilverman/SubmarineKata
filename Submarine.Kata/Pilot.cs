@@ -33,7 +33,7 @@ public class Pilot(ISubmarineService submarineService, IFileSystem fileSystem)
 
     private string ExposeSubmarinePosition()
     {
-        return $"Distance Traveled: {submarineService.GetDistance()}\nSubmarine Depth: {submarineService.GetDepth()}\nTotal Distance Traveled: {submarineService.GetDistanceTraveled()}";
+        return $"\nHorizontal Position: {submarineService.GetDistance()}\n\nSubmarine Depth: {submarineService.GetDepth()}\n\nHorizontal Position * Depth: {submarineService.GetDistanceTraveled()}";
     }
 
 

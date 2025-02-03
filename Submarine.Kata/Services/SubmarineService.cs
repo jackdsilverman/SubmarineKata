@@ -22,11 +22,7 @@ public class SubmarineService : ISubmarineService
         sub = new Sub();
     }
     public void Dive(int dive) => sub.Depth += dive;
-    public void Rise(int rise)
-    {
-        if(sub.Depth - rise <=0) sub.Depth=0;
-        else sub.Depth -= rise;
-    }
+    public void Rise(int rise) => sub.Depth -= rise;
 
     public void Forward(int forward) => sub.Distance += forward;
 
@@ -34,5 +30,5 @@ public class SubmarineService : ISubmarineService
 
     public int GetDistance() => sub.Distance;
 
-    public int GetDistanceTraveled() => Math.Abs(sub.Depth * sub.Distance);
+    public int GetDistanceTraveled() =>sub.Depth * sub.Distance;
 }
