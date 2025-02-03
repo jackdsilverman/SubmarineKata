@@ -59,7 +59,7 @@ public class SubmarineServiceTests
         ISubmarineService submarineService = new SubmarineService();
         //act
         submarineService.Forward(forward);
-        submarineService.Dive(2);
+        submarineService.Dive(dive);
         //assert
         Assert.That(submarineService.GetDistanceTraveled(), Is.EqualTo(forward*dive));
     }
